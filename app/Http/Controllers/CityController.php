@@ -5,15 +5,22 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCityRequest;
 use App\Http\Requests\UpdateCityRequest;
 use App\Models\City;
+use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request, $departamentId = null)
     {
-        //
+        if ($departamentId) {
+            $cities = City::with('departament')->where('departament_id', $departamentId)->get();
+        } else {
+            $cities = City::with('departament')->paginate(20);
+        }
+
+        return response()->json($cities, 200);
     }
 
     /**

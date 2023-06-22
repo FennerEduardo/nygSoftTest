@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->string('city');
+            $table->string('area_code')->nullable();
+            $table->string('gob_code')->nullable();
+            $table->string('lon')->nullable();
+            $table->string('lat')->nullable();
+            $table
+                ->foreignId('departament_id')
+                ->constrained('departaments')
+                ->onDelete('no action')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }
