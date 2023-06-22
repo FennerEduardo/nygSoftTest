@@ -1,3 +1,35 @@
+# Building test to NyG Soft by Fenner González
+
+This repository contains the backend  and frontend application to job test for NyG Soft, and the steps for its initialization are:
+
+- **Install MySQL**
+- **Create Database nygsoft**
+- **Copy and rename env.example to .env**
+- **Set User and Password to database**
+- **Install php8.1**
+- **Install PHP extensions to Laravel**
+- **Install Composer 2**
+- **Clone repository**
+- **Run composer install in project**
+
+
+
+- **Project configuration and start command:**
+    ```
+    - php artisan app:project-setup
+    ```
+- **Routes to get the form:**
+    ```
+    - [Trips Create](http://127.0.0.1:8000/trips/create)
+    - [Api Cities](http://127.0.0.1:8000/api/cities/2)
+    ```
+
+#
+
+## **This app has been created using Laravel**
+
+#
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

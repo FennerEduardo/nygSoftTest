@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('departaments', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('area_code');
+            $table->string('gob_code')->nullable();
+            $table->integer('country_id')->nullable();
             $table->timestamps();
         });
     }
