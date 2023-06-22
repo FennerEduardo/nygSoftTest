@@ -11,12 +11,15 @@ This repository contains the backend  and frontend application to job test for N
 - **Install Composer 2**
 - **Clone repository**
 - **Run composer install in project**
+- **Install Node Js**
 
 
 
 - **Project configuration and start command:**
     ```
     - php artisan app:project-setup
+    - npm install
+    - npm run dev
     ```
 - **Routes to get the form:**
     ```
